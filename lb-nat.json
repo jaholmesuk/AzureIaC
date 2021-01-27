@@ -214,7 +214,8 @@
         },
         "diagnosticsProfile": {
           "bootDiagnostics": {
-              "enabled": true
+              "enabled": true,
+              "storageUri": "[concat('https://', parameters('newStorageAccountName'), '.blob.core.windows.net')]"
           }
       },
         "networkProfile": {
