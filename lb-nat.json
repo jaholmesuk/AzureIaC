@@ -214,7 +214,7 @@
         },
         "diagnosticsProfile": {
           "bootDiagnostics": {
-              "enabled": true,
+              "enabled": true
           }
       },
         "networkProfile": {
