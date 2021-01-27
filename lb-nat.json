@@ -23,11 +23,6 @@
         "description": "Name of the virtual network"
       }
     },
-    "newStorageAccountName": {
-      "type": "string",
-      "metadata": {
-        "description": "Name of the blob storage for diagnostics"
-    },
     "subnetname": {
       "defaultValue": "mySubnet",
       "type": "String",
@@ -220,7 +215,6 @@
         "diagnosticsProfile": {
           "bootDiagnostics": {
               "enabled": true,
-              "storageUri": "[concat('https://', parameters('newStorageAccountName'), '.blob.core.windows.net')]"
           }
       },
         "networkProfile": {
