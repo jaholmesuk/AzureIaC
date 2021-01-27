@@ -1,0 +1,26 @@
+on: [push]
+name: Azure ARM deploy VNET, LB NAT and VM
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout code
+    - uses: actions/checkout@main
+
+      # Log into Azure
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZDEPLOY }}
+
+      # Deploy ARM template
+    - name: Run ARM LB and VM
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.AZ_SUB }}
+        resourceGroupName: ${{ secrets.AZ_RG }}
+        template: ./lb-nat.json
+        parameters: adminusername=${{ secrets.AZP }},adminpassword=${{ secrets.AZP }}
+
+      # output containerName variable from template
+    - run: echo ${{ steps.deploy.outputs.containerName }}
