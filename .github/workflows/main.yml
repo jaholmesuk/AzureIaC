@@ -23,7 +23,6 @@ jobs:
         parameters: 
           adminusername=${{ secrets.AZU }}
           adminpassword=${{ secrets.AZP }}
-          newStorageAccountName=${{ secrets.AZS }}
 
       # output containerName variable from template
     - run: echo ${{ steps.deploy.outputs.containerName }}
