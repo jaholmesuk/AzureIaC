@@ -23,6 +23,10 @@
         "description": "Name of the virtual network"
       }
     },
+    "newStorageAccountName": {
+      "type": "string",
+      "default value": "vmdiagjh4133"
+    },
     "subnetname": {
       "defaultValue": "mySubnet",
       "type": "String",
