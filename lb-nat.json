@@ -98,14 +98,6 @@
         "description": "Administrator password for virtual machine"
       }
     },
-    "diagnosticsProfile": {
-      "bootDiagnostics": {
-      "enabled": true,
-      "storageUri": "[concat('https://', parameters('newStorageAccountName'), '.blob.core.windows.net')]"
-      }
-        }
-        }
-    },
     "location": {
       "defaultValue": "[resourceGroup().location]",
       "type": "String",
@@ -220,6 +212,11 @@
           },
           "allowExtensionOperations": true
         },
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+              "enabled": true
+          }
+      },
         "networkProfile": {
           "networkInterfaces": [
             {
