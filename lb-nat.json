@@ -25,7 +25,8 @@
     },
     "newStorageAccountName": {
       "type": "string",
-      "default value": "vmdiagjh4133"
+      "metadata": {
+        "description": "Name of the blob storage for diagnostics"
     },
     "subnetname": {
       "defaultValue": "mySubnet",
