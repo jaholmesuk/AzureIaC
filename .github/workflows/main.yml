@@ -20,7 +20,8 @@ jobs:
         subscriptionId: ${{ secrets.AZ_SUB }}
         resourceGroupName: ${{ secrets.AZ_RG }}
         template: ./lb-nat.json
-        parameters: adminusername=${{ secrets.AZP }},adminpassword=${{ secrets.AZP }}
+        parameters: adminusername=${{ secrets.AZU }}
+        parameters: adminpassword=${{ secrets.AZP }}
 
       # output containerName variable from template
     - run: echo ${{ steps.deploy.outputs.containerName }}
