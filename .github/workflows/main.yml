@@ -1,5 +1,5 @@
 on: [push]
-name: Azure ARM deploy VNET, LB NAT and VM
+name: Azure ARM deploy VNET core
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
