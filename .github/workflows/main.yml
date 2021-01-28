@@ -19,10 +19,8 @@ jobs:
       with:
         subscriptionId: ${{ secrets.AZ_SUB }}
         resourceGroupName: ${{ secrets.AZ_RG }}
-        template: ./lb-nat.json
-        parameters: 
-          adminusername=${{ secrets.AZU }}
-          adminpassword=${{ secrets.AZP }}
+        template: ./core-vnet-params.json
+        parameters: ./core-vnet.json
 
       # output containerName variable from template
     - run: echo ${{ steps.deploy.outputs.containerName }}
